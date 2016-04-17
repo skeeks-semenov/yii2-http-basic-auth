@@ -1,0 +1,27 @@
+{
+	"name": "skeeks/yii2-http-basic-auth",
+	"description": "Http basic auth for Yii2 project",
+	"keywords": ["yii", "skeeks", "framework", "component", "http-basic-auth"],
+    "homepage": "http://cms.skeeks.com/",
+	"type": "yii2-extension",
+	"license": "GPL-3.0+",
+	"support": {
+        "issues": "http://skeeks.com/",
+        "wiki": "http://en.cms.skeeks.com/docs/",
+        "source": "https://github.com/skeeks-semenov/yii2-http-basic-auth"
+    },
+	"authors": [
+		{
+			"name": "Semenov Alexander",
+			"email": "semenov@skeeks.com"
+		}
+	],
+	"require": {
+	  	"yiisoft/yii2": "*"
+	},
+    "autoload": {
+        "psr-4": {
+            "skeeks\\yii2\\httpBasicAuth\\": ""
+        }
+    }
+}
