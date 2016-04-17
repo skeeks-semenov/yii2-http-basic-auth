@@ -20,6 +20,7 @@ or add
 
 Configuration app
 ----------
+### Exemple 1
 
 ```php
 
@@ -41,7 +42,7 @@ Configuration app
 ]
 
 ```
-
+### Exemple 2
 
 ```php
 
