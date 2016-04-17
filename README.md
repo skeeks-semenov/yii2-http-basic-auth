@@ -23,7 +23,22 @@ Configuration app
 
 ```php
 
+'on beforeRequest' => function ($event) {
+    \Yii::$app->httpBasicAuth->verify();
+},
 
+'components' =>
+[
+    'httpBasicAuth' =>
+    [
+        'class'             => 'skeeks\yii2\httpBasicAuth\HttpBasicAuthComponent',
+        'login'             => 'login',
+        'password'          => 'password',
+        'usePasswordHash'   => false,                               //optionality
+        'viewFail'          => '@app/views/http-basic-auth-fail'    //optionality
+    ],
+
+]
 
 ```
 

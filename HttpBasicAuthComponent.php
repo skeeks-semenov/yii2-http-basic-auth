@@ -24,44 +24,65 @@ class HttpBasicAuthComponent extends Component
      */
     public $password = 'password';
 
+    /**
+     * @var bool
+     */
+    public $usePasswordHash = false;
 
-    public function execute()
+    /**
+     * @var null
+     */
+    public $viewFail = null;
+
+
+    public function verify()
     {
-        if (!isset($_SERVER['PHP_AUTH_PW']))
+        if (\Yii::$app->request->authUser != $this->login || !$this->_verifyPassword())
         {
-            $this->_authentificateHttp();
-        }
-
-        if(!@$_SERVER['PHP_AUTH_PW'])
-        {
-            $this->_authentificateHttp();
-        }
-
-        else
-        {
-            if (@$_SERVER['PHP_AUTH_USER'] != $this->login || @$_SERVER['PHP_AUTH_PW'] != $this->password)
-            {
-                $this->_authentificateHttp();
-            }
+            $this->_fail();
         }
     }
 
-    protected function _authentificateHttp()
+    /**
+     * @return bool
+     */
+    protected function _verifyPassword()
     {
-        $appName = \Yii::$app->id;
-        Header("WWW-Authenticate: Basic realm=\"{$appName}\"");
-        Header("HTTP/1.0 401 Unauthorized");
-        echo <<<HTML
-        <style>
-            .sx-title
-            {
-                text-align: center;
-                font-size: 20px;
-                padding: 200px;
-            }
-        </style>
-        <p class="sx-title">{$appName} Authorization required.</p>
+        if ($this->usePasswordHash)
+        {
+            return (bool) (md5(\Yii::$app->request->authPassword) == $this->password);
+        } else
+        {
+            return (bool) (\Yii::$app->request->authPassword == $this->password);
+        }
+    }
+
+    protected function _fail()
+    {
+        $appName = \Yii::$app->name;
+
+        if ($this->viewFail)
+        {
+            Header("WWW-Authenticate: Basic realm=\"{$appName}\"");
+            Header("HTTP/1.0 401 Unauthorized");
+
+            echo \Yii::$app->view->render($this->viewFail);
+        } else
+        {
+            Header("WWW-Authenticate: Basic realm=\"{$appName}\"");
+            Header("HTTP/1.0 401 Unauthorized");
+            echo <<<HTML
+            <style>
+                .sx-title
+                {
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 200px;
+                }
+            </style>
+            <p class="sx-title">{$appName} Authorization required.</p>
 HTML;
+        }
 
         exit;
     }
