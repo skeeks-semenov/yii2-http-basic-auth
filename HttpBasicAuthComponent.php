@@ -61,16 +61,24 @@ class HttpBasicAuthComponent extends Component
     {
         $appName = \Yii::$app->name;
 
+        $user = \Yii::$app->request->authUser;
+        $password = \Yii::$app->request->authPassword;
+        $ip = \Yii::$app->request->userIP;
+
+
         if ($this->viewFail)
         {
             Header("WWW-Authenticate: Basic realm=\"{$appName}\"");
             Header("HTTP/1.0 401 Unauthorized");
 
+            \Yii::error("Fail http basic auth $user@$password ({$ip})", self::className());
             echo \Yii::$app->view->render($this->viewFail);
         } else
         {
             Header("WWW-Authenticate: Basic realm=\"{$appName}\"");
             Header("HTTP/1.0 401 Unauthorized");
+
+            \Yii::error("Fail http basic auth $user@$password ({$ip})", self::className());
             echo <<<HTML
             <style>
                 .sx-title
