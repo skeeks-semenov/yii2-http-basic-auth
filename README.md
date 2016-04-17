@@ -42,6 +42,30 @@ Configuration app
 
 ```
 
+
+```php
+
+'on beforeRequest' => function ($event) {
+    //For example in addition to close the admin panel http authorization
+    if (\Yii::$app->admin->requestIsAdmin)
+    {
+        \Yii::$app->httpBasicAuth->verify();
+    }
+},
+
+'components' =>
+[
+    'httpBasicAuth' =>
+    [
+        'class'             => 'skeeks\yii2\httpBasicAuth\HttpBasicAuthComponent',
+        'login'             => 'login',
+        'password'          => 'password',
+    ],
+
+]
+
+```
+
 ___
 
 > [![skeeks!](https://gravatar.com/userimage/74431132/13d04d83218593564422770b616e5622.jpg)](http://skeeks.com)  
