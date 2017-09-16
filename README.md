@@ -1,6 +1,11 @@
 Http basic auth for Yii2 project
 ===================================
 
+[![Latest Stable Version](https://poser.pugx.org/skeeks/yii2-http-basic-auth/v/stable.png)](https://packagist.org/packages/skeeks/yii2-http-basic-auth)
+[![Total Downloads](https://poser.pugx.org/skeeks/yii2-http-basic-auth/downloads.png)](https://packagist.org/packages/skeeks/yii2-http-basic-auth)
+[![Reference Status](https://www.versioneye.com/php/skeeks:yii2-http-basic-auth/reference_badge.svg)](https://www.versioneye.com/php/skeeks:yii2-http-basic-auth/references)
+[![Dependency Status](https://www.versioneye.com/php/skeeks:yii2-http-basic-auth/dev-master/badge.png)](https://www.versioneye.com/php/skeeks:yii2-http-basic-auth/dev-master)
+
 Installation
 ------------
 
@@ -20,7 +25,8 @@ or add
 
 Configuration app
 ----------
-### Exemple 1
+Exemple 1
+---------
 
 ```php
 
@@ -42,7 +48,8 @@ Configuration app
 ]
 
 ```
-### Exemple 2
+Exemple 2
+---------
 
 ```php
 
@@ -68,9 +75,8 @@ Configuration app
 ```
 
 ___
-
-> [![skeeks!](https://gravatar.com/userimage/74431132/13d04d83218593564422770b616e5622.jpg)](http://skeeks.com)  
-<i>SkeekS CMS (Yii2) — quickly, easily and effectively!</i>  
-[skeeks.com](http://skeeks.com) | [en.cms.skeeks.com](http://en.cms.skeeks.com) | [cms.skeeks.com](http://cms.skeeks.com) | [marketplace.cms.skeeks.com](http://marketplace.cms.skeeks.com)
+> [![skeeks!](https://skeeks.com/img/logo/logo-no-title-80px.png)](https://skeeks.com)  
+<i>SkeekS CMS (Yii2) — fast, simple, effective!</i>  
+[skeeks.com](https://skeeks.com) | [cms.skeeks.com](https://cms.skeeks.com)
 
 
