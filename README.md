@@ -1,11 +1,8 @@
 Http basic auth for Yii2 project
 ===================================
 
-[![Latest Stable Version](https://poser.pugx.org/skeeks/yii2-http-basic-auth/v/stable.png)](https://packagist.org/packages/skeeks/yii2-http-basic-auth)
-[![Total Downloads](https://poser.pugx.org/skeeks/yii2-http-basic-auth/downloads.png)](https://packagist.org/packages/skeeks/yii2-http-basic-auth)
-[![Reference Status](https://www.versioneye.com/php/skeeks:yii2-http-basic-auth/reference_badge.svg)](https://www.versioneye.com/php/skeeks:yii2-http-basic-auth/references)
-[![Dependency Status](https://www.versioneye.com/php/skeeks:yii2-http-basic-auth/dev-master/badge.png)](https://www.versioneye.com/php/skeeks:yii2-http-basic-auth/dev-master)
-
+[![Latest Stable Version](https://img.shields.io/packagist/v/skeeks/yii2-http-basic-auth.svg)](https://packagist.org/packages/skeeks/yii2-http-basic-auth)
+[![Total Downloads](https://img.shields.io/packagist/dt/skeeks/yii2-http-basic-auth.svg)](https://packagist.org/packages/skeeks/yii2-http-basic-auth)
 Installation
 ------------
 
@@ -75,8 +72,10 @@ Exemple 2
 ```
 
 ___
+
 > [![skeeks!](https://skeeks.com/img/logo/logo-no-title-80px.png)](https://skeeks.com)  
-<i>SkeekS CMS (Yii2) — fast, simple, effective!</i>  
+<i>SkeekS CMS (Yii2) — quickly, easily and effectively!</i>  
 [skeeks.com](https://skeeks.com) | [cms.skeeks.com](https://cms.skeeks.com)
+
 
 
