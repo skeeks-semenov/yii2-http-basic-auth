@@ -3,6 +3,7 @@ Http basic auth for Yii2 project
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/skeeks/yii2-http-basic-auth.svg)](https://packagist.org/packages/skeeks/yii2-http-basic-auth)
 [![Total Downloads](https://img.shields.io/packagist/dt/skeeks/yii2-http-basic-auth.svg)](https://packagist.org/packages/skeeks/yii2-http-basic-auth)
+
 Installation
 ------------
 
